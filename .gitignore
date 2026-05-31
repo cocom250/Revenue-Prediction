@@ -8,6 +8,6 @@ __pycache__/
 # macOS files
 .DS_Store
 
-# Virtual environments (if you create one later)
+# Virtual environments 
 venv/
 .env/
