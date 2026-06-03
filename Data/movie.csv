@@ -1,0 +1,86 @@
+﻿event_id,movie_1_title,movie_2_title,movie_1_rating,movie_2_rating,movie_1_ratings,movie_2_ratings,movie_1_genre,movie_2_genre,movie_1_release,movie_2_release
+1,Perks of Being a Wallflower ,Welcome to The Dollhouse,4,3.6,635996,37579,Drama,Comedy/Drama,2012,1995
+2,Mean Girls,Jawbreaker ,3.8,3.4,401508,47246,Comedy/Drama,Comedy/Thriller,2004,1999
+3,American Psycho,Rules of Attraction ,3.8,3.3,555179,12652,Crime/Drama/Thriller,Comedy/Drama,2000,2002
+4,Golden Gate Girls ,,3.5,,67,,Documentry,,2013,
+5,Mallrats,SLC Punk,3.4,3.8,23687,55648,Romance/Comedy,Comedy/Drama,1995,1998
+6,Greener Grass,Pleasantvile,3.6,3.7,26122,24966,Comedy ,Comedy/Drama,2019,1998
+7,Spree,Wobble Palace,3.1,3.1,127113,1591,Comedy/Horror,Romance/Comedy,2020,2018
+8,Rodrick Rules,,3.8,,122765,,Comedy ,,2011,
+9,Intercepted,,3.8,,520,,Documentry,,2024,
+10,Mobilize,Edge of the Knife ,3.6,3.6,420,586,Documentry,Horror/Drama,2015,2018
+11,Angela,Saint Maud,3.6,3.5,751,62115,Drama,Horror/Thriller,1995,2019
+12,Possum,Four Flies on Grey Velvet,3.1,3.4,23665,6176,Horror/Thriller,Horror/Thriller,2018,1971
+13,Ma ,Serial Mom,2.5,3.8,112543,38467,Horror/Thriller,Comedy/Crime,2019,1994
+14,Lurker,,3.6,,35115,,Drama/Thriller,,2025,
+15,Repulsion ,May,3.9,3.6,19958,55841,Horror/Thriller,Comedy/Horror,1960,2002
+16,Spark Animaiton,,,,,,,,,
+17,The Lair of the White Worm,The Devils,3.5,4.2,20179,25906,Comedy/Horror,Horror/Drama,1988,1971
+18,The Adams Family,The Adams Family Values,3.8,3.8,72907,51366,Comedy ,Comedy,1991,1993
+19,Re-Animator,Evil Dead 2,3.8,4,55488,117689,Comedy/Horror,Comedy/Horror,1985,1987
+20,The Day Iceland stood Still,,4,,678,,Documentry,,2023,
+21,Three…Extremes,Pulse,3.6,3.7,4385,51010,Horror,Horror,2004,2001
+22,Hour of the Wolf,Let the Right One In,4,4,15763,33901,Horror/Drama,Horror/Drama,1968,2008
+23,Lunacy,Viy,3.7,3.6,546,15153,Comedy/Horror,Horror/Drama,2005,1967
+24,A girl Walks home alone at night,Tenebre,3.8,3.7,38120,24201,Romance/Horror,Horror/Thriller,2014,1982
+25,Scream,,4,,485958,,Crime/Horror,,1996,
+26,Bon Cop Bad Cop,The Kid Detective,3.1,3.7,1680,17758,Comedy/Action,Comedy/Drama,2006,2020
+27,Antiviral,Sick of Myself,3.3,4.7,9787,51003,Scifi/Horror,Comedy/Horror,2012,2022
+28,Legally Blonde,,3.8,,313434,,Comedy ,,2001,
+29,Nalujuk Night,Atanarjuat,3.6,3.7,218,941,Documentry,Drama/Fantasy ,2021,2001
+30,The Thomas Crown affair,Killing Zoe,3.4,3.2,14176,1270,Crime/Drama ,Crime/Drama,1999,1993
+31,Mommy,,4.3,,57435,,Drama,,2014,
+32,J'ai tué ma mère,White Lie,3.9,3.4,15321,1028,Drama,Drama ,2009,2019
+33,Alicia,,3.4,,198,,Horror,,1994,
+34,Lilies,C.R.A.Z.Y,3.9,4,1909,4972,Romance/Drama,Comedy/Drama,1996,2005
+35,,,,,,,,,,
+36,Ginger Snaps 2,Highway 61,3.2,3.5,8953,174,Horror/Drama,Comedy,2004,1991
+37,History of Sound,,3.4,,44485,,Romance/Drama,,2025,
+38,Malestrom,Crash,3.2,3.6,3978,109899,Drama,Drama/Thriller,2000,1996
+39,Student Showcase,,,,,,,,,
+40,Molkom Monday,,,,,,,,,
+41,,,,,,,,,,
+42,The Shining,,4.2,,428824,,Horror,,1980,
+43,The Polar Express,The Thing,3.3,4.4,119440,305676,Animation ,Horror/Scifi,2004,1982
+44,The Mastermind,,3.2,,69184,,Crime/Drama ,,2025,
+45,Gremlins,12 Monkey,3.6,3.9,104791,52551,Comedy/Horror,Thriller/Mystery,1984,1995
+46,Meet Me in St.Louis ,A Muppet Christmas Carol,3.8,4.1,25764,154239,Romance/Drama,Drama/Fantasy ,1944,1992
+47,Spinal Tap,Misery,3.9,4,56014,123835,Comedy ,Horror/Drama,1984,1990
+48,City of God,La Haine,4.6,4.5,198051,228979,Drama,Drama ,2002,1995
+49,Little Women,The Virgin Suicides,4.2,3.9,571343,328658,Romance/Drama,Romance/Drama,2019,1999
+50,The Assaination of Jesse James,Meeks Cutoff,4,3.7,30444,9741,Drama/Western,Drama/Western,2007,2010
+51,Do the Right Thing,Mystery Train,4.4,4,115391,15773,Drama,Comedy,1989,1989
+52,Three Promises,,3.8,,214,,Documentry,,2023,
+53,All That Jazz,The Phantom of the Paradise,4.3,4.1,52093,66010,Drama,Comedy/Horror,1979,1974
+54,Die my Love,,3.2,,199596,,Drama,,2025,
+55,"Aguirre, The Wrath of God",Apocalypse Now,4.1,4.4,31892,159541,Drama/History,Drama/War,1972,1979
+56,Happy Holidays,,3.3,,487,,Drama,,2024,
+57,Embrace of the Serpent,Museo,4.2,3.7,6575,5617,Drama,Crime/Drama,2016,2018
+58,Scott Pilgrim vs The World,,3.9,,471627,,Romance/Comedy,,2010,
+59,Eyimofe,Rafiki,3.7,3.6,1065,7050,Drama,Romance/Drama,2020,2018
+60,Dolores,,3.7,,278,,Documentry,,2017,
+61,Laila and the Wolves,,4.1,,1639,,Documentry,,1984,
+62,Heated Rivalry,,4.4,,100000,,Romance/Drama,,2025,
+63,Pride & Prejudice,Portrait of a Lady on Fire,4.1,4.4,551069,309465,Romance/Drama,Romance/Drama,2005,2019
+64,Crouching Tiger Hidden Dragon,Chunking Express,4.1,4.3,43531,223857,Drama/Action,Romance/Comedy,2000,1994
+65,Before Sunrise ,Before Sunset,4.3,4.3,423174,232244,Romance/Drama,Romance/Drama,1995,2004
+66,Wall-e,First Man,4.2,3.7,172719,52717,Animation ,Drama/History,2008,2018
+67,Stories We have Earned,,,,,,,,2024,
+68,Coconut Head Generation ,Ouaga Girls ,3.9,3.2,234,16,Documentry,Documentry,2023,2017
+69,How to Blow up a Pipeline,The Lorax,3.8,3.3,33644,91251,Thriller/Crime,Animation,2022,2012
+70,F1,Rush,3.6,3.9,639052,49693,Drama/Action,Drama/Action,2025,2013
+71,Dope ,ATL,3.5,3.5,15348,2929,Comedy/Drama,Romance/Comedy,2015,2006
+72,Indian Horse ,Beans,3.6,3.6,1340,1664,Drama,Drama ,2017,2020
+73,Wings of desire,The Sacrifice ,4.3,4.3,45379,20156,Romance/Drama,Drama,1987,1986
+74,Network,Face in the Crowd,4.3,4.2,56258,8709,Drama,Drama,1976,1957
+75,My Fathers Shadow,,4.1,,12030,,Drama,,2025,
+76,Waves,Moonlight,4,4.2,203497,230087,Romance/Drama,Drama,2019,2016
+77,Coffee and Cigarettes,Clerks,3.8,3.8,16696,39349,Comedy/Drama,Comedy,2003,1994
+78,Pitch Perfect,,3.6,,280067,,Comedy,,2012,
+79,Pink Floyd: The wall ,Amadeus,4.1,4.4,27829,96816,Drama/History,Drama/History,1982,1984
+80,Manchester by the Sea,Pursuit of Happiness,4.1,4,205292,89141,Drama,Drama,2016,2006
+81,Universal Language,Taste of Cherry,3.8,4.3,11961,52765,Comedy/Drama,Drama,2024,1997
+82,Hot Fuzz,The Blue's Brothers,4.1,4,139534,47994,Comedy/Action,Comedy,2007,1980
+83,Salut les Cubains,Strawberry and Chocolate,4,3.8,4757,1856,Documentry,Comedy/Drama,1963,1993
+84,Dazed and Confused,The big Lebowski,3.9,4.1,157843,202389,Comedy/Drama,Comedy/Crime,1993,1998
+85,All that’s left of you ,,4.2,,6793,,Drama,,2025,
