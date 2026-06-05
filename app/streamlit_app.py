@@ -2,9 +2,9 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import plotly.express as px
-from pages.insights import show_insights
-from pages.overview import show_overview
-from pages.predictor import show_predictor
+from views.insights import show_insights
+from views.overview import show_overview
+from views.predictor import show_predictor
 
 # Sidebar Navigator 
 st.set_page_config(
