@@ -151,6 +151,16 @@ Several opportunities exist to improve both the forecasting model and the decisi
 - Generate prediction intervals in addition to point estimates to communicate forecasting uncertainty.
 - Evaluate additional forecasting approaches and incorporate new external factors such as weather, academic schedules, and competing campus events.
 
+## Dashboard 
+<img width="2092" height="1232" alt="image" src="https://github.com/user-attachments/assets/ec3a356b-6354-4c14-bda7-416d79197df2" />
+
+<img width="2102" height="1450" alt="image" src="https://github.com/user-attachments/assets/7981f22e-6845-4197-87da-c4787773d5e7" />
+
+<img width="2104" height="1522" alt="image" src="https://github.com/user-attachments/assets/63d65316-4d7e-463b-b0fe-a4686aef89d6" />
+
+
+
+
 
 
 
