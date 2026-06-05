@@ -8,6 +8,7 @@ BASE_DIR = Path(__file__).resolve().parents[2]
 
 MODEL_PATH = BASE_DIR / "models" / "revenue_model.pkl"
 FEATURE_PATH = BASE_DIR / "models" / "model_features.pkl"
+MODEL_RMSE = 91
 
 @st.cache_resource
 def load_model():
@@ -32,148 +33,179 @@ def show_predictor():
     left, right = st.columns([1.2, 1])
 
     with left:
-        st.subheader("Event Details")
+        with st.container(border=True):
+            st.subheader("Event Details")
 
-        event_type = st.selectbox(
-            "Event Type",
-            ["double screening", "special event", "single screening"]
-        )
+            col1, col2, = st.columns(2)
 
-        collab = st.selectbox(
-            "Collaboration",
-            ["No", "Yes"]
-        )
+            with col1:
+                event_type = st.selectbox(
+                    "Event Type",
+                    ["double screening", "special event", "single screening"]
+                )
 
-        day_of_week = st.selectbox(
-            "Day of Week",
-            [
-                "Monday", "Tuesday", "Wednesday",
-                "Thursday", "Friday", "Saturday", "Sunday"
-            ]
-        )
+                collab = st.selectbox(
+                    "Collaboration",
+                    ["No", "Yes"]
+                )
 
-        month = st.slider(
-            "Month",
-            min_value=1,
-            max_value=12,
-            value=9
-        )
+            with col2:
+                day_of_week = st.selectbox(
+                    "Day of Week",
+                    [
+                        "Monday", "Tuesday", "Wednesday",
+                        "Thursday", "Friday", "Saturday", "Sunday"
+                    ]
+                )
 
-        num_posts = st.number_input(
-            "Number of Promotional Posts",
-            min_value=0,
-            value=1
-        )
+                month = st.slider(
+                    "Month",
+                    min_value=1,
+                    max_value=12,
+                    value=9
+                )
 
-        days_from_event = st.number_input(
-            "Days Between Post and Event",
-            min_value=0,
-            value=3
-        )
+        with st.container(border=True):
+            st.subheader("Instagram Engagement")
 
-        st.subheader("Instagram Engagement")
+            col1, col2, col3 = st.columns(3)
 
-        likes = st.number_input(
-            "Likes",
-            min_value=0,
-            value=100
-        )
+            with col1:
+                num_posts = st.number_input(
+                    "Number of Promotional Posts",
+                    min_value=0,
+                    value=1
+                )
+            with col2:
+                days_from_event = st.number_input(
+                    "Days Between Post and Event",
+                    min_value=0,
+                    value=3
+                )
 
-        num_comments = st.number_input(
-            "Comments",
-            min_value=0,
-            value=5
-        )
+            with col3:
+                likes = st.number_input(
+                    "Likes",
+                    min_value=0,
+                    value=100
+                )
 
-        num_shares = st.number_input(
-            "Shares",
-            min_value=0,
-            value=10
-        )
+            col4, col5 = st.columns(2)
 
-        general_promo_likes = st.number_input(
-            "Grouped Promo Likes",
-            min_value=0,
-            value=0
-        )
+            with col4:
+                num_comments = st.number_input(
+                    "Comments",
+                    min_value=0,
+                    value=5
+                )
 
-        general_promo_shares = st.number_input(
-            "Grouped Promo Shares",
-            min_value=0,
-            value=0
-        )
+            with col5:
+                num_shares = st.number_input(
+                    "Shares",
+                    min_value=0,
+                    value=10
+                )
 
-        st.subheader("Movie Metadata")
+        with st.container(border=True):
+            st.subheader("General Promo")
 
-        screening_format = st.selectbox(
-            "Screening Format",
-            ["Single Screening", "Double Screening"]
-        )
+            col1, col2 = st.columns(2)
+            with col1:
+                general_promo_likes = st.number_input(
+                    "Grouped Promo Likes",
+                    min_value=0,
+                    value=0
+                )
 
-        is_double_feature = screening_format == "Double Screening"
+            with col2:
+                general_promo_shares = st.number_input(
+                    "Grouped Promo Shares",
+                    min_value=0,
+                    value=0
+                )
 
-        # Movie 1 inputs
-        st.markdown("**Movie 1**")
+        with st.container(border=True):
+            st.subheader("Movie Metadata")
 
-        movie_1_rating = st.number_input(
-            "Movie 1 Rating",
-            min_value=0.0,
-            max_value=5.0,
-            value=3.8,
-            step=0.1
-        )
-
-        movie_1_review_count = st.number_input(
-            "Movie 1 Letterboxd Review Count",
-            min_value=0,
-            value=100000,
-            step=1000
-        )
-
-        movie_1_age = st.number_input(
-            "Movie 1 Age",
-            min_value=0,
-            value=20
-        )
-
-        primary_genre = st.selectbox(
-            "Primary Genre",
-            [
-                "Action", "Animation", "Comedy", "Drama", "Horror",
-                "Romance", "Sci-Fi", "Thriller", "Documentary", "Other"
-            ]
-        )
-
-        # Movie 2 inputs only show for double screenings
-        if is_double_feature:
-            st.markdown("**Movie 2**")
-
-            movie_2_rating = st.number_input(
-                "Movie 2 Rating",
-                min_value=0.0,
-                max_value=5.0,
-                value=3.8,
-                step=0.1
+            screening_format = st.selectbox(
+                "Screening Format",
+                ["Single Screening", "Double Screening"]
             )
 
-            movie_2_review_count = st.number_input(
-                "Movie 2 Letterboxd Review Count",
-                min_value=0,
-                value=100000,
-                step=1000
+            is_double_feature = screening_format == "Double Screening"
+
+            st.markdown("**Movie 1**")
+
+            col1, col2, col3 = st.columns(3)
+
+            with col1:
+                movie_1_rating = st.number_input(
+                    "Rating",
+                    min_value=0.0,
+                    max_value=5.0,
+                    value=3.8,
+                    step=0.1,
+                    key="movie_1_rating"
+                )
+
+            with col2:
+                movie_1_review_count = st.number_input(
+                    "Review Count",
+                    min_value=0,
+                    value=100000,
+                    step=1000,
+                    key="movie_1_reviews"
+                )
+
+            with col3:
+                movie_1_age = st.number_input(
+                    "Movie Age",
+                    min_value=0,
+                    value=20,
+                    key="movie_1_age"
+                )
+
+            primary_genre = st.selectbox(
+                "Primary Genre",
+                ["Action", "Animation", "Comedy", "Drama", "Horror", "Romance", "Sci-Fi", "Thriller", "Documentary", "Other"]
             )
 
-            movie_2_age = st.number_input(
-                "Movie 2 Age",
-                min_value=0,
-                value=20
-            )
+            if is_double_feature:
+                st.markdown("**Movie 2**")
 
-        else:
-            # For single screenings, movie 2 values are filled from movie 1
-            movie_2_rating = movie_1_rating
-            movie_2_review_count = movie_1_review_count
-            movie_2_age = movie_1_age
+                col1, col2, col3 = st.columns(3)
+
+                with col1:
+                    movie_2_rating = st.number_input(
+                        "Rating",
+                        min_value=0.0,
+                        max_value=5.0,
+                        value=3.8,
+                        step=0.1,
+                        key="movie_2_rating"
+                    )
+
+                with col2:
+                    movie_2_review_count = st.number_input(
+                        "Review Count",
+                        min_value=0,
+                        value=100000,
+                        step=1000,
+                        key="movie_2_reviews"
+                    )
+
+                with col3:
+                    movie_2_age = st.number_input(
+                        "Movie Age",
+                        min_value=0,
+                        value=20,
+                        key="movie_2_age"
+                    )
+
+            else:
+                movie_2_rating = movie_1_rating
+                movie_2_review_count = movie_1_review_count
+                movie_2_age = movie_1_age
 
     # Feature engineering
     total_engagement = (
@@ -242,14 +274,36 @@ def show_predictor():
             pred_log = model.predict(input_data)
             prediction = np.expm1(pred_log)[0]
 
+            lower_bound = max(0, prediction - MODEL_RMSE)
+            upper_bound = prediction + MODEL_RMSE
+
             st.metric(
                 "Predicted Revenue",
                 f"${prediction:,.2f}"
             )
 
+            st.metric(
+                "Prediction Range",
+                f"${lower_bound:,.1f} - {upper_bound:,.1f}"
+            )
+
             st.caption(
                 "Prediction is an estimate and should be interpreted alongside event context."
             )
+
+            st.markdown("### Prediction Signals")
+
+            signals = get_prediction_signals(
+                max_review_count=max_review_count,
+                total_engagement=total_engagement,
+                num_shares=num_shares,
+                avg_movie_rating=avg_movie_rating,
+                is_double_feature=is_double_feature,
+                collab=collab
+            )
+
+            for signal in signals:
+                st.write(f"✔️ {signal}")
 
             if prediction < 75:
                 st.warning(
@@ -266,3 +320,41 @@ def show_predictor():
 
         with st.expander("View model input"):
             st.dataframe(input_data)
+
+def get_prediction_signals(
+    max_review_count,
+    total_engagement,
+    num_shares,
+    avg_movie_rating,
+    is_double_feature,
+    collab
+):
+    signals = []
+
+    if max_review_count >= 300000:
+        signals.append("High movie popularity")
+    elif max_review_count >= 100000:
+        signals.append("Moderate movie popularity")
+    else:
+        signals.append("Lower movie popularity")
+
+    if total_engagement >= 150:
+        signals.append("Strong Instagram engagement")
+    elif total_engagement >= 75:
+        signals.append("Moderate Instagram engagement")
+    else:
+        signals.append("Lower Instagram engagement")
+
+    if num_shares >= 15:
+        signals.append("High share activity")
+
+    if avg_movie_rating >= 4.0:
+        signals.append("Highly rated movie")
+
+    if is_double_feature:
+        signals.append("Double feature event")
+
+    if collab == "Yes":
+        signals.append("Collaboration event")
+
+    return signals

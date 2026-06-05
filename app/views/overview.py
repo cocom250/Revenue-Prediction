@@ -25,77 +25,80 @@ def show_overview():
     left_col, right_col = st.columns([1, 1.4])
 
     with left_col:
-        st.subheader("Project Summary")
-        st.write(
-            """
-            This project predicts concession revenue for film screenings using
-            event data, Instagram engagement metrics, and movie metadata.
-            """
-        )
+        with st.container(border=True):
+            st.subheader("Project Summary")
+            st.write(
+                """
+                This project predicts concession revenue for film screenings using
+                event data, Instagram engagement metrics, and movie metadata.
+                """
+            )
 
-        st.markdown(
-            """
-            **Data used:**
-            - Square concession sales
-            - Instagram likes, comments, and shares
-            - Letterboxd ratings and review counts
-            - Event and movie metadata
-            """
-        )
+            st.markdown(
+                """
+                **Data used:**
+                - Square concession sales
+                - Instagram likes, comments, and shares
+                - Letterboxd ratings and review counts
+                - Event and movie metadata
+                """
+            )
 
-        st.info(
-            "Key finding: movie popularity was the strongest predictor of event revenue."
-        )
+            st.info(
+                "Key finding: movie popularity was the strongest predictor of event revenue."
+            )
 
     with right_col:
-        st.subheader("Model Performance")
+        with st.container(border=True): 
+            st.subheader("Model Performance")
 
-        results = pd.DataFrame({
-            "Feature Set": [
-                "Baseline",
-                "Movie Only",
-                "Combined"
-            ],
-            "Mean CV R²": [
-                0.18,
-                0.30,
-                0.35
-            ]
-        })
+            results = pd.DataFrame({
+                "Feature Set": [
+                    "Baseline",
+                    "Movie Only",
+                    "Combined"
+                ],
+                "Mean CV R²": [
+                    0.18,
+                    0.30,
+                    0.35
+                ]
+            })
 
-        fig = px.bar(
-            results,
-            x="Feature Set",
-            y="Mean CV R²",
-            color="Feature Set",
-            text="Mean CV R²",
-            color_discrete_sequence=px.colors.qualitative.Set2,
-            title="Cross-Validated Performance by Feature Set"
-        )
+            fig = px.bar(
+                results,
+                x="Feature Set",
+                y="Mean CV R²",
+                color="Feature Set",
+                text="Mean CV R²",
+                color_discrete_sequence=px.colors.qualitative.Set2,
+                title="Cross-Validated Performance by Feature Set"
+            )
 
-        fig.update_traces(
-            texttemplate="%{text:.2f}",
-            textposition="outside"
-        )
+            fig.update_traces(
+                texttemplate="%{text:.2f}",
+                textposition="outside"
+            )
 
-        fig.update_layout(
-            showlegend=False,
-            yaxis_range=[0, 0.45]
-        )
+            fig.update_layout(
+                showlegend=False,
+                yaxis_range=[0, 0.45]
+            )
 
-        st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, use_container_width=True)
 
     st.divider()
 
-    st.subheader("Main Takeaways")
+    with st.container(border=True):
+        st.subheader("Main Takeaways")
 
-    takeaway1, takeaway2, takeaway3 = st.columns(3)
+        takeaway1, takeaway2, takeaway3 = st.columns(3)
 
-    with takeaway1:
-        st.success("Movie metadata improved prediction performance.")
+        with takeaway1:
+            st.success("Movie metadata improved prediction performance.")
 
-    with takeaway2:
-        st.success("Instagram engagement still added useful signal.")
+        with takeaway2:
+            st.success("Instagram engagement still added useful signal.")
 
-    with takeaway3:
-        st.success("The combined feature set performed best.")
+        with takeaway3:
+            st.success("The combined feature set performed best.")
