@@ -156,7 +156,8 @@ Several opportunities exist to improve both the forecasting model and the decisi
 
 <img width="2102" height="1450" alt="image" src="https://github.com/user-attachments/assets/7981f22e-6845-4197-87da-c4787773d5e7" />
 
-<img width="2104" height="1522" alt="image" src="https://github.com/user-attachments/assets/63d65316-4d7e-463b-b0fe-a4686aef89d6" />
+<img width="2106" height="1572" alt="image" src="https://github.com/user-attachments/assets/dbc2f205-1fb2-4121-993a-4d883b31913c" />
+
 
 
 
