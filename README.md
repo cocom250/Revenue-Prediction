@@ -152,11 +152,14 @@ Several opportunities exist to improve both the forecasting model and the decisi
 - Evaluate additional forecasting approaches and incorporate new external factors such as weather, academic schedules, and competing campus events.
 
 ## Dashboard 
-<img width="2092" height="1232" alt="image" src="https://github.com/user-attachments/assets/ec3a356b-6354-4c14-bda7-416d79197df2" />
+<img width="2916" height="1648" alt="image" src="https://github.com/user-attachments/assets/43ea15ee-a6e4-42b5-b871-8fb3aa2747d1" />
 
-<img width="2102" height="1450" alt="image" src="https://github.com/user-attachments/assets/7981f22e-6845-4197-87da-c4787773d5e7" />
+<img width="2940" height="1626" alt="image" src="https://github.com/user-attachments/assets/cde723af-b352-4fc4-a815-4e1fa27db507" />
 
-<img width="2106" height="1572" alt="image" src="https://github.com/user-attachments/assets/dbc2f205-1fb2-4121-993a-4d883b31913c" />
+<img width="2938" height="1640" alt="image" src="https://github.com/user-attachments/assets/875a6fe6-aa00-4c46-b8b4-e5793eb18d9d" />
+
+
+
 
 
 
